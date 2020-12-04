@@ -18,16 +18,12 @@
 │   │   ├── PEAR
 │   │   ├── PEAR.php
 │   │   └── System.php
-│   ├── index.html
 │   ├── index.php
 │   ├── LICENSE
 │   ├── LICENSE.txt
-│   ├── phpinfo.php
 │   ├── README.md
 │   ├── settings.php
 │   └── webdav_server.php
 └── logs
-    ├── access_log
-    ├── error_log
     ├── zotero.access.log
     └── zotero.error.log
