@@ -32,3 +32,9 @@ Almost all of the problems you may have are due to file privileges, firewall con
 Use the command `chmod -R +rx /var/www` on the linux command line to change the file permissions.
 Use the command `iptables` to change firewall rules. (See a tutorial first.)
 Use the command `sudo systemctl restart nginx` and `sudo systemctl restart php7.0-fpm` to restart the nginx and PHP-FPM.
+
+## Client-Side
+
+Here is what the configuration looks like on the Zotero client on my computer:
+
+
