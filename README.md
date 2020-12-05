@@ -36,5 +36,7 @@ Use the command `sudo systemctl restart nginx` and `sudo systemctl restart php7.
 ## Client-Side
 
 Here is what the configuration looks like on the Zotero client on my computer. Note that IP address will be different for you, whatever your server's ip address is.
+
+
 ![image](https://raw.githubusercontent.com/sinan-ozel/phpZoteroWebDAV-nginx-configuration/master/client-side-configuration.png)
 
