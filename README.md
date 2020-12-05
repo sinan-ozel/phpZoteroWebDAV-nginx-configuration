@@ -19,11 +19,11 @@ Also study the original instructions from [Christian Holz' blog](http://blog.hol
 
 ## Steps
 
-1. Install nginx 1.10.3, PHP 7.0
-2. Create the folder structure in the file tree.txt
-3. Set up the configuration files in 
-4. Set up the soft link to the configuration file 
-5. Make the changes in the file
+1. Install nginx 1.10.3, PHP 7.0, and the required PHP modules with the commands in the script [apt-install-nginx-and-php.sh](https://github.com/sinan-ozel/phpZoteroWebDAV-nginx-configuration/blob/master/apt-install-nginx-and-php.sh).
+2. Create the folder structure in the file [`tree.txt`](https://github.com/sinan-ozel/phpZoteroWebDAV-nginx-configuration/blob/master/tree.txt) in the web server root folder. (i.e. typically under `/var/www/` for Ubuntu linux systems.)
+3. Set up the configuration file in [/etc/nginx/sites-available/zotero.conf](https://github.com/sinan-ozel/phpZoteroWebDAV-nginx-configuration/blob/master/etc/nginx/sites-available/zotero.conf) 
+4. Set up the soft link to the configuration file from `sites-available` to `sites-enabled`. (i.e. run `sudo ln -s /etc/nginx/sites-available/zotero.conf .` while in the folder `/etc/nginx/sites-enabled`.)
+5. Make the shown changes in the file [/etc/php/7.0/fpm/pool.d/www.conf](https://github.com/sinan-ozel/phpZoteroWebDAV-nginx-configuration/blob/master/etc/php/7.0/fpm/pool.d/www.conf)
 6. Install the files from [phpZoteroWebDAV](https://github.com/krueschan/phpZoteroWebDAV) in the root folder directory, following the folder structure in 
 
 ## Troubleshooting
