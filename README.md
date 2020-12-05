@@ -24,9 +24,11 @@ Also study the original instructions from [Christian Holz' blog](http://blog.hol
 3. Set up the configuration file in [/etc/nginx/sites-available/zotero.conf](https://github.com/sinan-ozel/phpZoteroWebDAV-nginx-configuration/blob/master/etc/nginx/sites-available/zotero.conf) 
 4. Set up the soft link to the configuration file from `sites-available` to `sites-enabled`. (i.e. run `sudo ln -s /etc/nginx/sites-available/zotero.conf .` while in the folder `/etc/nginx/sites-enabled`.)
 5. Make the shown changes in the file [/etc/php/7.0/fpm/pool.d/www.conf](https://github.com/sinan-ozel/phpZoteroWebDAV-nginx-configuration/blob/master/etc/php/7.0/fpm/pool.d/www.conf)
-6. Install the files from [phpZoteroWebDAV](https://github.com/krueschan/phpZoteroWebDAV) in the root folder directory, following the folder structure in 
+6. Install the files from [phpZoteroWebDAV](https://github.com/krueschan/phpZoteroWebDAV) in the root folder directory, following the folder structure in [`tree.txt`](https://github.com/sinan-ozel/phpZoteroWebDAV-nginx-configuration/blob/master/tree.txt).
+7. Set up file and folder permissions, change ownership if necessary, test the configuration files (`sudo nginx -t`) and (re)start nginx and PHP-FPM. 
 
 ## Troubleshooting
-Almost all of the problems you may have are due to file privileges and firewall configuration.
+Almost all of the problems you may have are due to file privileges, firewall configuration, or needing to restart nginx or PHP FPM services.
 Use the command `chmod -R +rx /var/www` on the linux command line to change the file permissions.
 Use the command `iptables` to change firewall rules. (See a tutorial first.)
+Use the command `sudo systemctl restart nginx` and `sudo systemctl restart php7.0-fpm` to restart the nginx and PHP-FPM.
